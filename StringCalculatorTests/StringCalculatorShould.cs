@@ -15,12 +15,14 @@ namespace StringCalculatorTests {
             result.Should().Be(0);
         }
 
-        [Test]
-        public void return_one_when_string_only_has_one()
+        [TestCase("1", 1, TestName = "1")]
+        [TestCase("13" ,13, TestName = "13")]
+        [TestCase("20", 20, TestName = "20")]
+        public void return_the_same_number_when_string_only_has_this_number(string values, float expected)
         {
-            var result = StringCalculator.Sum("1");
+            var result = StringCalculator.Sum(values);
 
-            result.Should().Be(1);
+            result.Should().Be(expected);
         }
     }
 }
