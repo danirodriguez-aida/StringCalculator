@@ -10,7 +10,7 @@ namespace StringCalculatorTests {
         [Test]
         public void return_zero_when_string_empty()
         {
-            var result = StringCalculator.Sum("");
+            var result = StringCalculator.Add("");
 
             result.Should().Be(0);
         }
@@ -18,9 +18,9 @@ namespace StringCalculatorTests {
         [TestCase("1", 1, TestName = "1")]
         [TestCase("13" ,13, TestName = "13")]
         [TestCase("20", 20, TestName = "20")]
-        public void return_the_same_number_when_string_only_has_this_number(string values, float expected)
+        public void return_the_same_number_when_string_only_has_this_number(string values, int expected)
         {
-            var result = StringCalculator.Sum(values);
+            var result = StringCalculator.Add(values);
 
             result.Should().Be(expected);
         }
@@ -28,7 +28,7 @@ namespace StringCalculatorTests {
         [Test]
         public void return_the_sum_of_two_numbers_when_these_are_separated_by_comma()
         {
-            var result = StringCalculator.Sum("1,3");
+            var result = StringCalculator.Add("1,3");
 
             result.Should().Be(4);
         }
