@@ -28,7 +28,7 @@ namespace StringCalculatorTests {
         [Test]
         public void return_the_sum_of_two_numbers_when_these_are_separated_by_comma()
         {
-            var result = StringCalculator.Sum("1;3");
+            var result = StringCalculator.Sum("1,3");
 
             result.Should().Be(4);
         }
