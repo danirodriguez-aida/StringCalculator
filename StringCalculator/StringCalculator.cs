@@ -4,6 +4,6 @@ public class StringCalculator
 {
     public float Sum(string values)
     {
-        throw new NotImplementedException();
+        return 0;
     }
 }
