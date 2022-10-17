@@ -1,8 +1,8 @@
 namespace StringCalculatorProject;
 
-public class StringCalculator
+public static class StringCalculator
 {
-    public float Sum(string values)
+    public static float Sum(this string values)
     {
         return 0;
     }

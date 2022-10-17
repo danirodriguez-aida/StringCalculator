@@ -10,9 +10,9 @@ namespace StringCalculatorTests {
         [Test]
         public void return_zero_when_string_empty()
         {
-            var stringCalculator = new StringCalculator();
+            
+            var result = StringCalculator.Sum("");
 
-            var result = stringCalculator.Sum("");
             result.Should().Be(0);
         }
     }
