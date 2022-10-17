@@ -1,3 +1,6 @@
+using FluentAssertions;
+using StringCalculatorProject;
+
 namespace StringCalculatorTests {
     public class StringCalculatorShould {
         [SetUp]
@@ -5,8 +8,12 @@ namespace StringCalculatorTests {
         }
 
         [Test]
-        public void Test1() {
+        public void return_zero_when_string_empty()
+        {
+            var stringCalculator = new StringCalculator();
 
+            var result = stringCalculator.Sum("");
+            result.Should().Be(0);
         }
     }
 }
