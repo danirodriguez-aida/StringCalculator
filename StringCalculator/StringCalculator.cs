@@ -2,8 +2,9 @@ namespace StringCalculatorProject;
 
 public static class StringCalculator
 {
-    public static float Sum(this string values)
+    public static float Sum(string values)
     {
-        return 0;
+        if (string.IsNullOrWhiteSpace(values)) return 0;
+        return 1;
     }
 }
