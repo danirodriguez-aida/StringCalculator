@@ -5,6 +5,6 @@ public static class StringCalculator
     public static float Sum(string values)
     {
         if (string.IsNullOrWhiteSpace(values)) return 0;
-        return 1;
+        return Convert.ToSingle(values);
     }
 }
