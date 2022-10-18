@@ -33,12 +33,13 @@ namespace StringCalculatorTests {
             result.Should().Be(4);
         }
 
-        [Test]
-        public void return_the_sum_of_more_than_two_numbers_separated_by_comma()
+        [TestCase("1,3,4", 8)]
+        [TestCase("3,4,3,3", 13)]
+        public void return_the_sum_of_more_than_two_numbers_separated_by_comma(string values, int expected)
         {
-            var result = StringCalculator.Add("1,3,4");
+            var result = StringCalculator.Add(values);
 
-            result.Should().Be(8);
+            result.Should().Be(expected);
         }
     }
 }
